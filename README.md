@@ -1,8 +1,7 @@
 # 說明
 ---
 - 使用Markdown語法撰寫學習筆記
-
-- 資料夾結構:
+- Folder structure:
   ```
   ./images
   └── git
