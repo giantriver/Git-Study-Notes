@@ -51,7 +51,6 @@
 | git branch -a | 查看所有的branch(包含remote) |
 | git push -u <remote名稱> HEAD | 推送當前分支至遠端repo |
 ## 五、 將Branch整併(Merge)回Master Branch
-### 方法1. 在GitHub上使用"pull request"
 可在GitHub上點選"Compare & pull request"將分支整併回主要支線如下圖所示。
 ![pull-request.jpg](..\images\git\pull-request.jpg)
 以下為一個整併(Merge)的範例:今日有A、B電腦，且A創建一個repo有著"1.txt"，並Push至GitHub，而B電腦進行Clone並且新增/切換至新的Branch並修改了"1.txt"同時新增了其他檔案。之後，A檔案對"1.txt"進行修改並再次Push至GitHub，若此時B想將Branch整併(Merge)回Master Branch，就必須先解決在"1.txt"上的Conflict。範例如下圖所示。
@@ -62,14 +61,13 @@
 | git rebase <要rebase到哪個分支> | 把目前分支的起始點移到最新進度 |
 | git rebase --continue | 解完衝突後繼續rebase |
 | git push -f | 強制把現在電腦上的紀錄push到remote **(千萬不要在主要分支上使用)** |
-| git branch -d <branch名稱> | 解完衝突後繼續rebase |
+| git branch -d <branch名稱> | 刪除電腦上的branch |
 
 > Notice :
 > 1.因發生"Conflict"所以無法"Merge":
 > ![cant-merge.jpg](..\images\git\cant-merge.jpg)
 > 2."Rebase"示意圖:
 > ![rebase.jpg](..\images\git\rebase.jpg)
-### 方法2. 在自己電腦上merge之後再push
 
 ## 參考資料
 1. 走歪的工程師James 【git教學系列】
