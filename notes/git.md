@@ -33,7 +33,7 @@
 假設有A、B兩台電腦並有相同的檔案，若A已修改檔案並且push到GitHub，則B電腦上的repo則會與GitHub上的repo有所衝突。B電腦需要先執行"git pull"並解決衝突的部分。
 | 常用指令 | 用途 |
 | :--: | :---|
-| git pull | 將remote上的新commit抓取下來 |
+| git pull | 將remote上的新commit(新進度)抓取下來 |
 
 > Notice :
 > 1.出現conflict的檔案會出現在 "merge changes"中
@@ -45,12 +45,18 @@
 | 常用指令 | 用途 |
 | :--: | :---|
 | git checkout -b <branch名稱> | 建立新的branch並切換過去 **(點選Create New Branch)** |
+| git switch <要切換的分支> | 切換到已存在的分支 |
+| git switch -c <branch名稱> | 建立新的branch並切換過去 **(點選Create New Branch)** |
 | git branch | 查看電腦上的branch |
 | git branch -a | 查看所有的branch(包含remote) |
 | git push -u <remote名稱> HEAD | 推送當前分支至遠端repo |
-## 五、 將Branch整併回Master Branch
+## 五、 將Branch整併(Merge)回Master Branch
 ### 方法1. 在GitHub上使用"pull request"
+可在GitHub上點選"Compare & pull request"將分支整併回主要支線如下圖所示。
 ![pull-request.jpg](..\images\git\pull-request.jpg)
+以下為一個整併(Merge)的範例:今日有A、B電腦，且A創建一個repo有著"1.txt"，並Push至GitHub，而B電腦進行Clone並且新增/切換至新的Branch並修改了"1.txt"同時新增了其他檔案。之後，A檔案對"1.txt"進行修改並再次Push至GitHub，若此時B想將Branch整併(Merge)回Master Branch，就必須先解決在"1.txt"上的Conflict。範例如下圖所示。
+![example.jpg](..\images\git\example.jpg)
+![cant-merge.jpg](..\images\git\cant-merge.jpg)
 | 常用指令 | 用途 |
 | :--: | :---|
 ### 方法2. 在自己電腦上merge之後再push
