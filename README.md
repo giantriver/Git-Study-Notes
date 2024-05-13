@@ -4,8 +4,10 @@
 - Folder structure:
   ```
   ./images
-  └── git
-      ├── .....jpg
+  ├── git
+      └── .....jpg
+  └── ml
+      └── .....jpg
   ./notes
   ├── ML.md
   └── git.md
