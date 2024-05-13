@@ -27,7 +27,7 @@
 | git reset -- soft Head~1 **(點選Undo Last Commit)** | 往前退一個commit並保留修改的部分 |
 
 > Notice : git checkout -- <檔案名稱> 與 git reset -- soft Head~1 之比較
-![compare.jpg](..\images\git\compare.jpg)
+![compare.jpg](../images/git/compare.jpg)
 
 ## 三、 Conflict介紹
 假設有A、B兩台電腦並有相同的檔案，若A已修改檔案並且push到GitHub，則B電腦上的repo則會與GitHub上的repo有所衝突。B電腦需要先執行"git pull"並解決衝突的部分。
