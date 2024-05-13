@@ -37,7 +37,9 @@
 
 > Notice :
 > 1.出現conflict的檔案會出現在 "merge changes"中
+> 
 > ![merge.jpg](../images/git/merge.jpg)
+> 
 > 2.解決衝突後會產生一個merge的commit
 ## 四、 Branch介紹
 "Commit"可比喻為遊戲的存檔，而一個專案會出現多次的"Commit"。多次"Commit"形成一條線時，"Branch"可使這條線產生分支並且進行開發，使其暫時不用擔心遇到"Conflift"。當專案開發到最後，可將Branch整併為主要的分支(Master branch)，如下圖所示。

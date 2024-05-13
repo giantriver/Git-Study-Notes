@@ -45,6 +45,7 @@ y = data["Salary"]
 ```
 #### 步驟2. Define Loss from Traning Data
 為了定義出「最適合資料的直線」，也就是找出最適合的 Unkown Parameters ，我們定義出 **成本函數 Cost Function = (真實數據 - 預測值)&sup2;** ，最適合的 w、b 所產生的直線，與所有真實資料的距離平方加總將會是最小值，故在 Cost Function 中，Cost為最小值時，所對應的 w、b 即為最佳的 Unkown Parameters，如下圖所示。
+
 ![cost-function.jpg](../images/ml/cost-function.jpg)
 ```python
 #計算 Cost Function
@@ -61,6 +62,7 @@ def compute_cost(x, y, w, b):
 #### 學習率 Learning rate
 ### 多元線性回歸 Multiple Linear Regression
 同一範例，若想以線性模型來
+
 ![mlr-example.jpg](../images/ml/mlr-example.jpg)
 ## 參考資料
 1. Hung-yi Lee【機器學習2021】 https://youtu.be/Ye018rCVvOo?si=AW3bcWO_nruAUVxP
